@@ -5,7 +5,7 @@
             $timestamp = time();
             $filename = 'Excel_' . $timestamp . '.xls';
             
-            header("Content-Type: application/vnd.ms-excel");
+            header("Content-Type application/vnd.ms-excel");
             header("Content-Disposition: attachment; filename=\"$filename\"");
             
             echo '<table border="1">';
