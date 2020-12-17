@@ -1,7 +1,3 @@
-h1{
-	background-color: red;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -11,7 +7,6 @@ body {
 }
 
 #form {
-  background-color: yellow;
   margin: 100px auto;
   font-family: roboto;
   padding: 40px;
@@ -20,7 +15,7 @@ body {
 }
 #form .cherem{
   padding: 10px;
-  width: 250px
+  width: 250px;
   font-size: 17px;
   border: 1px solid rgba(0,0,0,0.5);
 }
@@ -42,7 +37,7 @@ body {
   cursor: pointer;
 }
 
-button:hover {
+#form button:hover {
   opacity: 0.8;
 }
 
@@ -51,17 +46,17 @@ button:hover {
 }
 
 
-.tab{
+#form .tab{
 	display: none;
 }
 
 
-.flextabh{
+#form .flextabh{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: left;
 }
-.ftabitem{
+#form .ftabitem{
 	width: 280px;
 	margin:10px;
 	
