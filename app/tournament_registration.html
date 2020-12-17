@@ -7,181 +7,98 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Tournament Registration</title>
   </head>
   <body>
    <section id="form">
-      <div class="container frbg">
-		    <form id="regForm" action="tournament_registration.php" method="POST">
-          <h2>Registration</h2>
-  <!-- One "tab" for each step in the form: -->
- 
-          <div class="tab ">
-          <h3>Tournament</h3>
-            <div class="flextabh">
-              <div class="ftabitem">
+      <div class="container">
+		    <form action="tournament_registration.php" method="POST">
+
+          <h3>Personal Details</h3>
+          <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-4 form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" placeholder="Name" name="name" required="required" class="form-control">
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 form-group">
+                  <label for="phone_number">Phone Number</label>
+                  <input type="tel" id="phone_number" placeholder="Phone" name="phone_number" required="required" class="form-control" pattern="[6789][0-9]{10}">
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 form-group">
+                  <label for="email">Email</label>
+                  <input type="text" id="email" placeholder="Email" name="email" required="required" class="form-control">
+              </div>
+
+              <div class="col-sm-12 col-md-6 col-lg-4 form-group">
+                  <label for="">Photo</label>
+                  <input type="file" placeholder="photo" name="image" required="required" class="form-control">
+              </div>    
+          </div>
+
+          <h3>Tournament Details</h3>
+            <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-4 form-group">
                 <label for="image">Photo</label>
-                <br>
                 <input type="file" placeholder="Photo" id="image" name="image" required="required" class="form-control">
               </div>
-              <!---End of ftabitems---->
-              <div class="ftabitem">
+              <div class="col-sm-12 col-md-6 col-lg-4 form-group">
                 <label for="name">Name</label>
-                <br>
                 <input type="text" placeholder="Name" id="name" name="name" required="required" class="form-control">
               </div>
-              <!----end of ftabitems--->
-              <div class="ftabitem">
-                <label for="description">Description</label>
-                <textarea id="description" name="description" rows="4" cols="30"></textarea>
-              </div>
-              <!----end of ftabitems--->
-              <div class="ftabitem">
+              <div class="col-sm-12 col-md-6 col-lg-4 form-group">
                 <label for="location">Location</label>
-                <br>
                 <input type="text" placeholder="Name" id="location" name="location" required="required" class="form-control">
               </div>
-              <!----end of ftabitems--->
-
-              <div class="ftabitem">
-                <label for="tournament date">Tournament Date</label>
-                <br>
-                <input type="date" id="tournament" id="tournament_date"name="tournament_date">
+              <div class="col-sm-12 col-md-12 col-lg-12 form-group">
+                <label for="description">Description</label>
+                <textarea id="description" placeholder="Description" name="description" class="form-control" row="4"></textarea>
               </div>
-              <!----end of ftabitems--->
-              <div class="ftabitem">
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-4 form-group">
+                <label for="tournament date">Tournament Date</label>
+                <input type="date" id="tournament" id="tournament_date"name="tournament_date" class="form-control">
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 form-group">
                 <label for="timing_start">Starting time</label>
                 <input type="time" id="timing_start" name="timing_start" required="required" class="form-control">
               </div>
-              <!----end of ftabitems--->
-              <div class="ftabitem">
+              <div class="col-sm-12 col-md-6 col-lg-4 form-group">
                 <label for="timing_end">Ending time</label>
                 <input type="time" id="timing_end" name="timing_end" required="required" class="form-control">
               </div>
-              <!----end of ftabitems--->
-              
-              <div class="ftabitem">
+            </div>
+
+            <h3>Price</h3>
+            <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-4 form-group">
+                <label for="winning_price">Winning Price</label>
+                <input type="number" placeholder="Rs." id="winning_price" name="winning_price_1" required="required" class="form-control">
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 form-group">
+                <label for="winning_price">Winning Price</label>
+                <input type="number" placeholder="Rs." id="winning_price" name="winning_price_1" required="required" class="form-control">
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 form-group">
+                <label for="winning_price">Winning Price</label>
+                <input type="number" placeholder="Rs." id="winning_price" name="winning_price_1" required="required" class="form-control">
+              </div>
+            </div>
+            
+            <h3>Fee</h3>
+            <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-4 form-group">
                <label for="entry_fee">Entry fee</label>
-                <br>
                 <input type="number" placeholder="Rs."id="entry_fee" name="entry_fee" required="required" class="form-control">
               </div>
-              <!----end of ftabitems--->
-              <div class="ftabitem">
-                <label for="winning_price">Winning Price</label>
-                <br>
-                <input type="number" placeholder="Rs." id="winning_price" name="winning_price_1" required="required" class="form-control">
-              </div>
-              <!----end of ftabitems--->
-              <div class="ftabitem">
-                <label for="winning_price">Winning Price</label>
-                <br>
-                <input type="number" placeholder="Rs." id="winning_price" name="winning_price_1" required="required" class="form-control">
-              </div>
-              <!----end of ftabitems--->
-              <div class="ftabitem">
-                <label for="winning_price">Winning Price</label>
-                <br>
-                <input type="number" placeholder="Rs." id="winning_price" name="winning_price_1" required="required" class="form-control">
-              </div>
-              <!----end of ftabitems--->
-              
-    </div>
-</div>
-<!-----------flex ends---->
- </form>
-</div>
-</section>
-<!----End of form----->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+            </div>
+        </form>
+      </div>
+    </section>
 
-
-<script>
-var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the current tab
-
-function showTab(n) {
-  // This function will display the specified tab of the form...
-  var x = document.getElementsByClassName("tab");
-  x[n].style.display = "block";
-  //... and fix the Previous/Next buttons:
-  if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
-  } else {
-    document.getElementById("prevBtn").style.display = "inline";
-  }
-  if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
-  } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
-  }
-  //... and run a function that will display the correct step indicator:
-  fixStepIndicator(n)
-}
-
-function nextPrev(n) {
-  // This function will figure out which tab to display
-  var x = document.getElementsByClassName("tab");
-  // Exit the function if any field in the current tab is invalid:
-  if (n == 1 && !validateForm()) return false;
-  // Hide the current tab:
-  x[currentTab].style.display = "none";
-  // Increase or decrease the current tab by 1:
-  currentTab = currentTab + n;
-  // if you have reached the end of the form...
-  if (currentTab >= x.length) {
-    // ... the form gets submitted:
-    document.getElementById("regForm").submit();
-    return false;
-  }
-  // Otherwise, display the correct tab:
-  showTab(currentTab);
-}
-
-function validateForm() {
-  // This function deals with validation of the form fields
-  var x, y, i, valid = true;
-  x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
-  // A loop that checks every input field in the current tab:
-  for (i = 0; i < y.length; i++) {
-    // If a field is empty...
-    if (y[i].value == "") {
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false
-      valid = false;
-    }
-  }
-  // If the valid status is true, mark the step as finished and valid:
-  if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish";
-  }
-  return valid; // return the valid status
-}
-
-function fixStepIndicator(n) {
-  // This function removes the "active" class of all steps...
-  var i, x = document.getElementsByClassName("step");
-  for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" active", "");
-  }
-  //... and adds the "active" class on the current step:
-  x[n].className += " active";
-}
-</script>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!--Scripts-->
+    <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>
