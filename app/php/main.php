@@ -147,6 +147,14 @@
             //Database
             $this->crud->insert(User_Contract::$table_name,User_Contract::get_columns(),$form_values);
         }
+
+        function update($id){
+            //Form Handelling
+            $form_values=$this->form->get_form_values();
+
+            //Database
+            $this->crud->update(User_Contract::$table_name,$id,User_Contract::get_columns(),$form_values);
+        }
     }
 
     class Tournament{

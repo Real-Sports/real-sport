@@ -6,7 +6,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $db_name="realsports";
+    $db_name="real_sports";
     // Create connection
     $con = new mysqli($servername, $username, $password,$db_name);
     // Check connection
