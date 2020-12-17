@@ -8,7 +8,7 @@
     include 'Util/export.php'; 
     include 'Util/Mail/mail.php';
 
-    trait Sport{
+    class Sport{
         private $crud;
         private $form;
 
@@ -38,7 +38,7 @@
         }
     }
 
-    trait Product{
+    class Product{
         private $crud;
         private $form;
 
@@ -63,7 +63,7 @@
         }
     }
 
-    trait Accessories{
+    class Accessories{
         private $crud;
         private $form;
 
@@ -76,31 +76,6 @@
 
             $this->form_file_names=array();
             $this->form_value_name=array();
-        }
-    }
-
-    class User{
-        private $crud;
-        private $form;
-
-        private $form_file_names;
-        private $form_value_names;
-
-        function __construct(){
-            $this->crud=new Crud();
-            $this->form=new Form();
-
-            $this->form_file_names=array();
-            $this->form_value_name=array();
-        }
-
-        function insert(){
-            //Form Handelling
-            $form_files=$this->form->get_form_files();
-            $form_values=$this->form->get_form_values();
-
-            //Database
-            $this->crud->insert(User_Contract::$table_name,User_Contract::get_columns(),array_merge($form_files,$form_values));
         }
     }
 
@@ -173,6 +148,37 @@
         }
 
         function insert(){
+            //Form Handelling
+            $form_files=$this->form->get_form_files();
+            $form_values=$this->form->get_form_values();
+
+            //Database
+            $this->crud->insert(User_Contract::$table_name,User_Contract::get_columns(),array_merge($form_files,$form_values));
+        }
+    }
+
+    class User{
+        private $crud;
+        private $form;
+
+        private $form_file_names;
+        private $form_value_names;
+
+        protected $stadium;
+        protected $tournament;
+
+        function __construct(){
+            $this->crud=new Crud();
+            $this->form=new Form();
+
+            $this->form_file_names=array();
+            $this->form_value_name=array();
+
+            $this->stadium=new Staduim();
+            $this->tournament=new Tournament();
+        }
+
+        function insert_stadium(){
             //Form Handelling
             $form_files=$this->form->get_form_files();
             $form_values=$this->form->get_form_values();
