@@ -15,26 +15,18 @@
         private $form_value_names;
 
         function __construct(){
-            $crud=new Crud();
-            $form=new Form();
+            $this->crud=new Crud();
+            $this->form=new Form();
 
-            $this->form_value_name=array();
+            $this->form_value_names=array("sport");
         }
 
         function insert(){
             //Form Handelling
-            $form_values=$this->form->get_form_values();
+            $form_values=$this->form->get_form_values($this->form_value_names);
 
             //Database
-            $this->crud->insert(User_Contract::$table_name,User_Contract::get_columns(),$form_values);
-        }
-
-        function update($id){
-            //Form Handelling
-            $form_values=$this->form->get_form_values();
-
-            //Database
-            $this->crud->update(User_Contract::$table_name,$id,User_Contract::get_columns(),$form_values);
+            $this->crud->insert(Sport_Contract::$table_name,Sport_Contract::get_columns(),$form_values);
         }
     }
 

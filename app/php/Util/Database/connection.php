@@ -8,9 +8,9 @@
     $password = "";
     $db_name="real_sports";
     // Create connection
-    $con = new mysqli($servername, $username, $password,$db_name);
+    $connection = new mysqli($servername, $username, $password,$db_name);
     // Check connection
-    if ($con->connect_error) {
-        die("Connection failed: " . $con->connect_error);
+    if ($connection->connect_error) {
+        die("Connection failed: " . $connection->connect_error);
     }
 ?>

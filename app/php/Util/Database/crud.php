@@ -18,11 +18,13 @@
             }
             //forming values within ()
             $sql=$sql.") VALUES (";
-            $sql=$sql."UPPER('".$values[0]."')";
+            $sql=$sql."'".$values[0]."'";
             for($i=1;$i<count($values);$i++){
                 $sql=$sql.",UPPER('".$values[$i]."')";
             }
             $sql=$sql.");";
+
+            echo $sql;
             if($GLOBALS['connection']->query($sql)){
                 //Insertion successfull
                 $_SESSION['message']="Insertion successfull";;
