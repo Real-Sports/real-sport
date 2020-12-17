@@ -14,168 +14,85 @@
   </head>
   <body>
    <section id="form">
-	<div class="container frbg">
-		<form id="regForm" action="tournament_registration.php" method="POST">
-  <h2>Registration</h2>
+      <div class="container frbg">
+		    <form id="regForm" action="tournament_registration.php" method="POST">
+          <h2>Registration</h2>
   <!-- One "tab" for each step in the form: -->
  
- <div class="tab ">
-  <h3>User</h3>
-    <div class="flextabh">
-      <div class="ftabitem">
-        <label>Name</label>
-        <br>
-           <input type="text" placeholder="Name" oninput="this.className = ''" name="name" required="required" class="form-control">
-      </div>
-      <!----end of ftabitems--->
+          <div class="tab ">
+          <h3>Tournament</h3>
+            <div class="flextabh">
+              <div class="ftabitem">
+                <label for="image">Photo</label>
+                <br>
+                <input type="file" placeholder="Photo" id="image" name="image" required="required" class="form-control">
+              </div>
+              <!---End of ftabitems---->
+              <div class="ftabitem">
+                <label for="name">Name</label>
+                <br>
+                <input type="text" placeholder="Name" id="name" name="name" required="required" class="form-control">
+              </div>
+              <!----end of ftabitems--->
+              <div class="ftabitem">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="4" cols="30"></textarea>
+              </div>
+              <!----end of ftabitems--->
+              <div class="ftabitem">
+                <label for="location">Location</label>
+                <br>
+                <input type="text" placeholder="Name" id="location" name="location" required="required" class="form-control">
+              </div>
+              <!----end of ftabitems--->
 
-      <div class="ftabitem">
-        <label>Phone Number</label>
-        <br>
-           <input type="tel" pattern="[6789][0-9]{10}"  placeholder="Phone" oninput="this.className = ''" name="phone_number" required="required" class="form-control">
-      </div>
-      <!----end of ftabitems--->
-
-      <div class="ftabitem">
-        <label>Email</label>
-        <br>
-           <input type="text" placeholder="Email" oninput="this.className = ''" name="email" required="required" class="form-control">
-      </div>
-      <!----end of ftabitems--->
-       <div class="ftabitem">
-        <label>Photo</label>
-        <br>
-           <input type="file" placeholder="photo" oninput="this.className = ''" name="image" required="required" class="form-control">
-      </div>
-      <!----end of ftabitems--->
-
-</div>
-</div>
-<!-----------flex ends---->
- 
-     <div class="tab ">
-      <h3>Stadium:</h3>
-    <div class="flextabh">
-    <div class="ftabitem">
-      <label>Photo</label>
-      <br>
-         <input type="file" placeholder="Photo" oninput="this.className = ''" name="image_1" required="required" class="form-control">
-    </div>
-    <!----end of ftabitems--->
-    <div class="ftabitem">
-      <label>Photo</label>
-      <br>
-         <input type="file" placeholder="Photo" oninput="this.className = ''" name="image_2" required="required" class="form-control">
-    </div>
-    <!----end of ftabitems--->
-    <div class="ftabitem">
-      <label>Photo</label>
-      <br>
-         <input type="file" placeholder="Photo" oninput="this.className = ''" name="image_3" required="required" class="form-control">
-    </div>
-    <!----end of ftabitems--->
-<div class="ftabitem">
-        <label>Name</label>
-        <br>
-           <input type="text" placeholder="Name" oninput="this.className = ''" name="stadium_name" required="required" class="form-control">
-      </div>
-      <!----end of ftabitems--->
-      <div class="ftabitem">
-        <label>Door Number</label>
-        <br>
-           <input type="text" placeholder="door-number" oninput="this.className = ''" name="door_number"required="required" class="form-control">
-      </div>
-      <!----end of ftabitems--->
-      <div class="ftabitem">
-        <label>Area</label>
-        <br>
-           <input type="text" placeholder="Area" oninput="this.className = ''" name="area"required="required" class="form-control">
-      </div>
-      <!----end of ftabitems--->
-       <div class="ftabitem">
-        <label>Land Mark</label>
-        <br>
-           <input type="text" placeholder="Landmark" oninput="this.className = ''" name="landmark" required="required" class="form-control">
-      </div>
-      <!----end of ftabitems--->
-      <div class="ftabitem">
-        <label>City</label>
-        <br>
-           <input type="text" placeholder="City" oninput="this.className = ''" name="city" required="required" class="form-control">
-      </div>
-      <!----end of ftabitems--->
-      <div class="ftabitem">
-        <label>Pincode</label>
-        <br>
-           <input type="number" placeholder="Pincode" oninput="this.className = ''" name="pincode" required="required" class="form-control">
-      </div>
-      <!----end of ftabitems--->
-      <div class="ftabitem">
-        <label for="types">Type:</label>
-  <select name="games" id="game" required="required" class="form-control">
-    <option value="">select</option>
-    <option value="indoor">Indoor</option>
-    <option value="outdoor">Outdoor</option>
-    </select>
-      </div>
-      <!----end of ftabitems--->
-      <div class="ftabitem">
-       <label for="timee">Opening time:</label>
-    <input type="time" id="appt" name="timing_open" required="required" class="form-control">
-        </div>
-      <!----end of ftabitems--->
-      <div class="ftabitem">
-       <label for="timee">Closing time:</label>
-    <input type="time" id="appt" name="timing_close" required="required" class="form-control">
-        </div>
-      <!----end of ftabitems--->
-       <div class="ftabitem">
-        <label>Pay Per Hour (Rs.)</label>
-        <br>
-           <input type="text" placeholder="Pay Per Hour" oninput="this.className = ''" name="pay_per_hour" required="required" class="form-control">
-      </div>
-      <!----end of ftabitems--->
-     <div class="ftabitem">
-        <label>Pay Per Day (Rs.)</label>
-        <br>
-           <input type="text" placeholder="Pay Per Day" oninput="this.className = ''" name="pay_per_day" required="required" class="form-control">
-      </div>
-
-</div>
-</div>
-<!-----------flex ends---->
-<div class="tab ">
-    <div class="flextabh">
-      <div class="ftabitem">
-       <input type="checkbox" id="vehicle1" name="accessory_1" class="cherem">
-  <label for="vehicle1"> Accessory</label>
-        </div>
-      <!----end of ftabitems--->
-      <div class="ftabitem">
-       <input type="checkbox" id="vehicle1" name="facility_1" class="cherem">
-  <label for="vehicle1"> Facility</label>
-        </div>
-      <!----end of ftabitems--->
+              <div class="ftabitem">
+                <label for="tournament date">Tournament Date</label>
+                <br>
+                <input type="date" id="tournament" id="tournament_date"name="tournament_date">
+              </div>
+              <!----end of ftabitems--->
+              <div class="ftabitem">
+                <label for="timing_start">Starting time</label>
+                <input type="time" id="timing_start" name="timing_start" required="required" class="form-control">
+              </div>
+              <!----end of ftabitems--->
+              <div class="ftabitem">
+                <label for="timing_end">Ending time</label>
+                <input type="time" id="timing_end" name="timing_end" required="required" class="form-control">
+              </div>
+              <!----end of ftabitems--->
+              
+              <div class="ftabitem">
+               <label for="entry_fee">Entry fee</label>
+                <br>
+                <input type="number" placeholder="Rs."id="entry_fee" name="entry_fee" required="required" class="form-control">
+              </div>
+              <!----end of ftabitems--->
+              <div class="ftabitem">
+                <label for="winning_price">Winning Price</label>
+                <br>
+                <input type="number" placeholder="Rs." id="winning_price" name="winning_price_1" required="required" class="form-control">
+              </div>
+              <!----end of ftabitems--->
+              <div class="ftabitem">
+                <label for="winning_price">Winning Price</label>
+                <br>
+                <input type="number" placeholder="Rs." id="winning_price" name="winning_price_1" required="required" class="form-control">
+              </div>
+              <!----end of ftabitems--->
+              <div class="ftabitem">
+                <label for="winning_price">Winning Price</label>
+                <br>
+                <input type="number" placeholder="Rs." id="winning_price" name="winning_price_1" required="required" class="form-control">
+              </div>
+              <!----end of ftabitems--->
+              
     </div>
 </div>
 <!-----------flex ends---->
-  
-    
-   <div style="overflow:auto;">
-    <div style="float:right;">
-      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-    </div>
-  </div>
-  <!-- Circles which indicates the steps of the form: -->
-  <div style="text-align:center;margin-top:40px;">
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-     </div>
-</form>
-
-	</div>
+ </form>
+</div>
 </section>
 <!----End of form----->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
